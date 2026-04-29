@@ -1,0 +1,11 @@
+.header {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #fff;
+}
+
+.header__logo {
+  width: 94px;
+  height: 26px;
+  object-fit: contain;
+}

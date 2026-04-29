@@ -1,0 +1,228 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    visibility 0.3s,
+    opacity 0.3s ease-in;
+}
+.modal_opened {
+  opacity: 1; /* Visible when opened */
+  visibility: visible;
+}
+
+.modal__container {
+  max-width: 730px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 32px 50px;
+  position: relative;
+}
+
+.modal__close-btn {
+  border: none; /* Remove default button border */
+  background-color: transparent; /* Remove default button background */
+  cursor: pointer; /* Show it's clickable */
+  background-image: url("../images/close.svg");
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  background-position: center;
+  background-size: contain; /* or specific size like 16px 16px */
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 32px;
+  right: 50px;
+}
+
+.modal__close-btn:hover,
+.modal__close-btn:focus {
+  opacity: 0.8; /* Slight transparency on hover/focus */
+  outline: none; /* Remove default focus outline */
+}
+
+.modal__title {
+  margin: 0 0 32px;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 500;
+  color: #212121;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__label {
+  color: rgba(33, 33, 33, 0.7);
+}
+
+.modal__input {
+  display: block;
+  width: 100%; /* Fill the container */
+  box-sizing: border-box; /* Include padding in width */
+  margin: 8px 0 32px;
+  padding: 16px 12px 16px;
+  border: 1px solid #2121214d;
+  border-radius: 8px;
+  font-size: 20px;
+  line-height: 1;
+  color: #212121;
+}
+
+.modal__input::placeholder {
+  color: #2121214d;
+}
+
+.modal__submit-btn {
+  max-width: 156px;
+  background-color: #000; /* Dark background */
+  color: #fff; /* White text */
+  padding: 18px 24px; /* Internal spacing */
+  border-radius: 8px; /* Rounded corners */
+  border: none; /* Remove default border */
+  cursor: pointer;
+}
+
+.modal__submit-btn:hover {
+  background-color: #333;
+}
+
+/* =========================
+   Preview Modal
+   ========================= */
+.modal__container_type_preview {
+  position: relative;
+  padding: 0;
+  background: none;
+  max-width: 80vw;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__container_type_preview .modal__close-btn {
+  top: -40px; /* Move closer to the modal */
+  right: -40px;
+}
+
+.modal__image {
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 320px) {
+  .modal__image {
+    max-width: 282px; /* Same width as cards */
+    width: 100%;
+  }
+}
+
+.modal__caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent box */
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: left; /* Left-align the text */
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+/* Close button for preview modal */
+#preview-modal .modal__close-btn {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 32px;
+  height: 32px;
+  background-image: url("../images/close.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 200; /* ABOVE THE OVERLAY */
+}
+
+/* =========================
+   Form Validation Styles
+   ========================= */
+.modal__error {
+  display: block;
+  font-size: 12px;
+  color: #ff0000;
+  margin-top: -24px;
+  margin-bottom: 16px;
+  min-height: 16px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.modal__error_visible {
+  opacity: 1;
+}
+
+.modal__input_type_error {
+  border-color: #ff0000;
+}
+
+.modal__button {
+  max-width: 156px;
+  background-color: #000;
+  color: #fff;
+  padding: 18px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: inherit;
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.modal__button:hover {
+  background-color: #333;
+}
+
+.modal__button_disabled {
+  background-color: #000;
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 630px) {
+  .modal__container {
+    padding: 22px 12px 12px; /* More specific padding */
+  }
+
+  .modal__title {
+    font-size: 20px; /* Smaller title for mobile */
+  }
+
+  .modal__input {
+    font-size: 16px; /* Optimized input text size */
+  }
+
+  .modal__close-btn {
+    top: 16px; /* Closer to top edge */
+    right: 12px; /* Closer to right edge */
+  }
+
+  .modal__button {
+    max-width: none; /* Full width button on mobile */
+  }
+}
