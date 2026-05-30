@@ -1,3 +1,6 @@
+<<<<<<< Updated upstream
+.DS_Store
+=======
 # This .gitignore is appropriate for repositories deployed to GitHub Pages and using
 # a Gemfile as specified at https://github.com/github/pages-gem#conventional
 
@@ -16,3 +19,5 @@ _site/
 # counterproductive to check this file into the repository.
 # Details at https://github.com/github/pages-gem/issues/768
 Gemfile.lock
+node_modules
+>>>>>>> Stashed changes
