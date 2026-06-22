@@ -13,6 +13,11 @@
   border-bottom: 1px solid #21212166; /* Add this line */
 }
 
+.card__like-btn {
+  background-color: transparent;
+  border: none;
+}
+
 @media screen and (max-width: 630px) {
   .cards__list {
     grid-template-columns: repeat(auto-fit, 288px);

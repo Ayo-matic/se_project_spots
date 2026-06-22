@@ -35,8 +35,7 @@ function hasInvalidInput(inputList) {
 
 export function toggleButtonState(inputList, buttonElement, config) {
   if (hasInvalidInput(inputList)) {
-    buttonElement.classList.add(config.inactiveButtonClass);
-    buttonElement.disabled = true;
+    disableButton(buttonElement, config);
   } else {
     buttonElement.classList.remove(config.inactiveButtonClass);
     buttonElement.disabled = false;
@@ -74,7 +73,6 @@ export function resetValidation(formElement, config) {
   inputList.forEach((inputElement) => {
     hideInputError(formElement, inputElement, config);
   });
-  buttonElement.classList.add(config.inactiveButtonClass);
-  buttonElement.disabled = true;
+  disableButton(buttonElement, config);
 }
 enableValidation(settings);

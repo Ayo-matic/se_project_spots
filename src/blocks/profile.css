@@ -5,6 +5,7 @@
   padding: 34px 0 20px;
   flex-wrap: wrap;
   border-bottom: 1px solid #21212166;
+  gap: 20px;
 }
 
 .profile__column {

@@ -10,6 +10,7 @@
   transition:
     visibility 0.3s,
     opacity 0.3s ease-in;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;  
 }
 .modal_opened {
   opacity: 1; /* Visible when opened */
@@ -116,7 +117,7 @@
 }
 
 .modal__image {
-  max-width: 80vw;
+  max-width: 90vw;
   max-height: 80vh;
   object-fit: contain;
   border-radius: 8px;
@@ -126,6 +127,11 @@
   .modal__image {
     max-width: 282px; /* Same width as cards */
     width: 100%;
+  }
+
+  .modal__container {
+    width: 90vw;
+    margin: 0 auto;
   }
 }
 
