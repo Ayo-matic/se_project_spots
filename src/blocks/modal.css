@@ -111,25 +111,25 @@
 }
 
 .modal__container_type_delete {
-  max-width: 430px;
-  padding: 50px 40px 34px;
+  max-width: 630px;
+  padding: 32px 20px;
 }
 
 .modal__container_type_delete .modal__close-btn {
-  top: 16px;
-  right: 16px;
+  top: -40px;
+  right: -40px;
 }
 
 .modal__title_type_delete {
   font-size: 20px;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .modal__form_type_delete {
   flex-direction: row;
-  gap: 16px;
+  gap: 32px;
 }
 
 .modal__button_type_delete {
@@ -143,9 +143,9 @@
 }
 
 .modal__button_type_cancel {
-  background-color: transparent;
+  background-color: #fff;
   color: #000;
-  border: 1px solid #000;
+  border: 2px solid #000;
   flex: 1;
   width: auto;
   padding: 18px 24px;
@@ -157,7 +157,8 @@
 }
 
 .modal__button_type_cancel:hover {
-  opacity: 0.6;
+  background-color: #000;
+  color: #fff;
 }
 
 .modal__container_type_preview {
