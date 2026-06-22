@@ -99,12 +99,11 @@
     </div>
 
     <div class="modal" id="delete-modal">
-      <div class="modal__container">
+      <div class="modal__container modal__container_type_delete">
         <button type="button" class="modal__close-btn"></button>
-        <h2 class="modal__title">Are you sure?</h2>
-        <p class="modal__subtitle">This action cannot be undone.</p>
-        <form class="modal__form" name="delete-form">
-          <button type="submit" class="modal__button">Yes, delete</button>
+        <h2 class="modal__title modal__title_type_delete">Are you sure you want to delete this image?</h2>
+        <form class="modal__form modal__form_type_delete" name="delete-form">
+          <button type="submit" class="modal__button modal__button_type_delete">Delete</button>
           <button type="button" class="modal__button modal__button_type_cancel">Cancel</button>
         </form>
       </div>
