@@ -19,12 +19,12 @@
 }
 
 .modal__container {
-  max-width: 430px;
+  max-width: 730px;
   width: 100%;
   box-sizing: border-box;
   border-radius: 8px;
   background-color: #fff;
-  padding: 34px 36px;
+  padding: 32px 50px;
   position: relative;
 }
 
@@ -37,11 +37,11 @@
   opacity: 0.4;
   background-position: center;
   background-size: contain;
-  width: 32px;
-  height: 32px;
+  width: 50px;
+  height: 50px;
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 32px;
+  right: 50px;
 }
 
 .modal__close-btn:hover,
@@ -51,9 +51,9 @@
 }
 
 .modal__title {
-  margin: 0 0 24px;
-  font-size: 18px;
-  line-height: 1.2;
+  margin: 0 0 32px;
+  font-size: 32px;
+  line-height: 1;
   font-weight: 500;
   color: #212121;
 }
@@ -65,37 +65,39 @@
 
 .modal__label {
   color: rgba(33, 33, 33, 0.7);
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .modal__input {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  margin: 8px 0 24px;
-  padding: 12px;
-  border: 1px solid #2121214d;
+  margin: 8px 0 32px;
+  padding: 16px 12px;
+  border: 1px solid rgba(33, 33, 33, 0.4);
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1;
   color: #212121;
   font-family: inherit;
 }
 
 .modal__input::placeholder {
-  color: #2121214d;
+  color: rgba(33, 33, 33, 0.3);
 }
 
 .modal__button {
-  width: 100%;
-  background-color: #000;
+  width: 156px;
+  background-color: #212121;
   color: #fff;
-  padding: 16px 24px;
+  padding: 18px 32px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
   font-size: 16px;
   font-family: inherit;
+  font-weight: 500;
   transition:
     background-color 0.2s ease,
     opacity 0.2s ease;
@@ -106,60 +108,62 @@
 }
 
 .modal__button_disabled {
-  background-color: #000;
+  background-color: #212121;
   opacity: 0.3;
   cursor: not-allowed;
   pointer-events: none;
 }
 
 .modal__container_type_delete {
-  max-width: 430px;
-  padding: 34px 36px;
+  max-width: 630px;
+  padding: 32px 20px;
 }
 
 .modal__container_type_delete .modal__close-btn {
-  top: -40px;
-  right: -40px;
+  top: -48px;
+  right: -48px;
 }
 
 .modal__title_type_delete {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 500;
-  text-align: left;
-  margin-bottom: 24px;
+  text-align: center;
+  margin-bottom: 32px;
 }
 
 .modal__form_type_delete {
   flex-direction: row;
-  gap: 16px;
+  justify-content: center;
+  gap: 20px;
 }
 
 .modal__button_type_delete {
-  background-color: #f00;
-  flex: 1;
-  width: auto;
+  background-color: #ff6565;
+  flex-shrink: 0;
+  width: 156px;
 }
 
 .modal__button_type_delete:hover {
-  background-color: #c00;
+  background-color: #e05050;
 }
 
 .modal__button_type_cancel {
   background-color: #fff;
-  color: #000;
-  border: 2px solid #000;
-  flex: 1;
-  width: auto;
-  padding: 16px 24px;
+  color: #212121;
+  border: 1px solid #212121;
+  flex-shrink: 0;
+  width: 156px;
+  padding: 18px 32px;
   border-radius: 8px;
   font-size: 16px;
   font-family: inherit;
+  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .modal__button_type_cancel:hover {
-  background-color: #000;
+  background-color: #212121;
   color: #fff;
 }
 
@@ -212,6 +216,74 @@
 
 .modal__input_type_error {
   border-color: #ff0000;
+}
+
+@media screen and (max-width: 320px) {
+  .modal__container {
+    width: 300px;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .modal__title {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .modal__input {
+    font-size: 16px;
+    padding: 16px 12px;
+    height: 48px;
+    margin: 8px 0 20px;
+  }
+
+  .modal__button {
+    width: 100%;
+    padding: 18px 32px;
+  }
+
+  .modal__close-btn {
+    top: 8px;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .modal__container_type_delete {
+    width: 300px;
+    padding: 12px;
+  }
+
+  .modal__container_type_delete .modal__close-btn {
+    top: -48px;
+    right: 0;
+  }
+
+  .modal__title_type_delete {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .modal__form_type_delete {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .modal__button_type_delete,
+  .modal__button_type_cancel {
+    width: 100%;
+  }
+
+  .modal__container_type_preview .modal__close-btn {
+    top: -48px;
+    right: 0;
+  }
+
+  .modal__image {
+    max-width: 288px;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) {
