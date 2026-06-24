@@ -14,8 +14,17 @@
 }
 
 .card__like-btn {
-  background-color: transparent;
+  background-image: url("../images/heart.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 20px;
   border: none;
+  background-color: transparent;
+  opacity: 0.4;
+  cursor: pointer;
+  mix-blend-mode: multiply;
 }
 
 @media screen and (max-width: 630px) {
