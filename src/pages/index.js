@@ -135,9 +135,6 @@ editProfileBtn.addEventListener("click", () => {
   nameInput.value = profileNameElement.textContent;
   descriptionInput.value = profileDescriptionElement.textContent;
   resetValidation(profileFormElement, settings);
-  const submitBtn = profileFormElement.querySelector(settings.submitButtonSelector);
-  submitBtn.classList.remove(settings.inactiveButtonClass);
-  submitBtn.disabled = false;
   openModal(editProfileModal);
 });
 
@@ -202,11 +199,12 @@ avatarForm.addEventListener("submit", (evt) => {
 
   api.editAvatar({ avatar: avatarInput.value })
     .then((userData) => {
-      if (userData.avatar) {
-  profileAvatar.src = userData.avatar;}
-      avatarForm.reset();
-      closeModal(editAvatarModal);
-    })
+  if (userData.avatar) {
+    profileAvatar.src = userData.avatar;
+  }
+  avatarForm.reset();
+  closeModal(editAvatarModal);
+})
     .catch(console.error)
     .finally(() => { submitBtn.textContent = "Save"; });
 });
