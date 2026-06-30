@@ -1,36 +1,24 @@
-# se_project_spots
-
 # Spots
 
-A responsive web application built as part of the TripleTen Software Engineering program.
+A social photo-sharing app built with HTML, CSS, JavaScript, Webpack, and a REST API.
 
-## About
+## Project Pitch Video
 
-Spots is a photo-sharing style web app where users can view and interact with a grid of image cards. The project focuses on building a clean, dynamic front-end interface with JavaScript, and emphasizes responsive design, DOM manipulation, and modular code structure.
+Check out [this video](https://www.loom.com/share/7982663f3ec249ad810ba9b5e81a536f), where I describe my project and the challenges I faced while building it.
+
+## Technologies Used
+
+- HTML5 & CSS3
+- JavaScript (ES Modules)
+- Webpack & Babel
+- PostCSS
+- REST API (fetch + Promises)
+- Git & GitHub Pages
 
 ## Features
 
-- Dynamic card rendering using JavaScript
-- Responsive layout across desktop and mobile
-- Interactive UI elements (likes, modals, form validation)
-- Clean, maintainable CSS using BEM methodology
-
-## Tech Stack
-
-- JavaScript
-- HTML5
-- CSS3
-
-## Getting Started
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Ayo-matic/se_project_spots.git
-   ```
-2. Open `index.html` in your browser — no build tools required.
-
-## Author
-
-Ayomikun — [GitHub](https://github.com/Ayo-matic) · [Email](mailto:ayomatic004@gmail.com)
-
----
+- Load profile and cards from a live API
+- Add, like, and delete cards
+- Edit profile name, description, and avatar
+- Form validation on all inputs
+- Responsive design for mobile and desktop
