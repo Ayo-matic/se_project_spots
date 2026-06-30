@@ -40,8 +40,8 @@
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 16px;
+  right: 16px;
 }
 
 .modal__close-btn:hover,
