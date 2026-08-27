@@ -45,7 +45,11 @@
 .modal__close-btn:hover,
 .modal__close-btn:focus {
   opacity: 0.8; /* Slight transparency on hover/focus */
-  outline: none; /* Remove default focus outline */
+}
+
+.modal__close-btn:focus-visible {
+  outline: 2px solid #2f80ed; /* Visible keyboard focus indicator */
+  outline-offset: 2px;
 }
 
 .modal__title {

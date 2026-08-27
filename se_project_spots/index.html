@@ -43,10 +43,19 @@
             <template id="card-template">
               <li class="card">
                 <img class="card__image" />
-                <button type="button" class="card__delete-btn"></button>
+                <button
+                  type="button"
+                  class="card__delete-btn"
+                  aria-label="Delete card"
+                ></button>
                 <div class="card__content">
                   <h2 class="card__title"></h2>
-                  <button type="button" class="card__like-btn"></button>
+                  <button
+                    type="button"
+                    class="card__like-btn"
+                    aria-label="Like card"
+                    aria-pressed="false"
+                  ></button>
                 </div>
               </li>
             </template>
@@ -107,7 +116,11 @@
 
     <div class="modal" id="new-post-modal">
       <div class="modal__container">
-        <button type="button" class="modal__close-btn"></button>
+        <button
+          type="button"
+          class="modal__close-btn"
+          aria-label="Close"
+        ></button>
         <h2 class="modal__title">New post</h2>
         <form action="#" class="modal__form" name="new-post-form">
           <label for="new-post-title-input" class="modal__label"
